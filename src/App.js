@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./pages/homepage/HomePage";
 import { connect } from "react-redux";
 import ShopPage from "./pages/shop/shop";
+import Checkout from "./components/checkout/checkout";
 import Header from "./components/header/header";
 import SignInandSignUpPage from "./pages/signin-signup/signin-signup";
 import React from "react";
@@ -48,6 +49,7 @@ class App extends React.Component {
               )
             }
           />
+          <Route path="/checkout" component={Checkout} />
         </Switch>
       </div>
     );

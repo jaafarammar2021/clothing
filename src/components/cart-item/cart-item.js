@@ -1,5 +1,6 @@
 import React from "react";
 import "./cart-item.scss";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import CustomButton from "../../components/custom-button/custom-button";
 import CartItem from "../cart.items.component/cart.items.component";
@@ -11,7 +12,10 @@ const Cart = ({ cartItems }) => (
         <CartItem key={cartItem.id} item={cartItem} />
       ))}
     </div>
-    <CustomButton>Go To Check Out</CustomButton>
+    <Link to="Checkout">
+      {" "}
+      <CustomButton>Go To Check Out</CustomButton>
+    </Link>
   </div>
 );
 const mapStateToProps = ({ cart: { cartItems } }) => ({
